@@ -801,7 +801,7 @@ class WSGIServer(object):
 
         def write(data):
             if type(data) is str:
-                data = data.encode('latin-1')
+                data = data.encode('utf-8')
 
             assert type(data) is bytes, 'write() argument must be bytes'
             assert headers_set, 'write() before start_response()'
